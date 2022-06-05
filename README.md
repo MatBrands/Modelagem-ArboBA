@@ -8,7 +8,7 @@ selenium
 webdriver-manager
 beautifulsoup4
 
-sudo apt-get install pandas
+sudo apt-get install pandas\n
 sudo apt-get install geopandas
 sudo apt-get install selenium
 sudo apt-get install webdriver-manager
