@@ -12,12 +12,12 @@ beautifulsoup4
 
 # Instalação
 
-sudo apt-get install pandas
+pip pandas
 
-sudo apt-get install geopandas
+pip geopandas
 
-sudo apt-get install selenium
+pip selenium
 
-sudo apt-get install webdriver-manager
+pip webdriver-manager
 
-sudo apt-get install beautifulsoup4
+pip beautifulsoup4
