@@ -1,4 +1,4 @@
-,Municipio,Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez
+,Município,Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez
 0,Abaíra,0,0,0,0,0,0,0,1,0,0,0,0
 1,Abaré,0,0,0,1,0,0,0,0,0,0,1,0
 2,Acajutiba,0,0,0,0,0,1,0,1,0,0,0,1
@@ -27,7 +27,7 @@
 25,Barra do Choça,3,1,2,5,1,0,0,0,1,0,0,0
 26,Barra do Mendes,8,3,33,132,21,18,4,0,0,0,1,1
 27,Barra do Rocha,1,1,1,0,2,0,0,0,0,1,0,1
-28,Barreiras,600,0,0,0,507,106,49,6,8,3,1,2
+28,Barreiras,600,1949,2041,1370,507,106,49,6,8,3,1,2
 29,Barro Alto,0,0,0,0,0,0,0,0,0,0,16,12
 30,Barro Preto,0,0,0,1,1,0,0,1,1,0,0,0
 31,Barrocas,0,0,0,0,0,0,0,0,1,2,0,0
@@ -196,7 +196,7 @@
 194,Lauro de Freitas,4,6,6,6,10,4,5,4,4,0,6,4
 195,Lençóis,0,0,0,0,0,0,0,3,2,0,0,0
 196,Livramento de Nossa Senhora,0,3,0,1,1,2,2,0,3,2,1,2
-197,Luís Eduardo Magalhães,40,0,0,401,50,12,17,1,2,0,0,4
+197,Luís Eduardo Magalhães,40,1878,1924,401,50,12,17,1,2,0,0,4
 198,Macajuba,0,0,0,0,1,1,0,0,0,1,0,0
 199,Macarani,0,0,0,0,0,0,0,1,1,5,40,34
 200,Macaúbas,12,51,47,123,197,50,17,26,7,2,1,0
