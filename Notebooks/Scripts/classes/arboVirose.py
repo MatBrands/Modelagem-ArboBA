@@ -3,7 +3,7 @@ import urllib.request
 import pandas as pd
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.utils import ChromeType
+from webdriver_manager.core.utils import ChromeType
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -37,6 +37,7 @@ class arboVirose():
     def __init__(self, arbo_v):
         os.environ['WDM_LOG_LEVEL'] = '0'
         self.arbo_v = arbo_v
+        self.obter_info()
     
     def obterUrl(self):
         if self.arbo_v == 'dengue':
@@ -51,25 +52,25 @@ class arboVirose():
         soup = BeautifulSoup(html, 'html5lib')
 
         linha = soup.find("div", {"class": "linha"}).find("select").select("option")
-        linha = list(map(lambda node: node.get_text().strip(), linha))
+        linha = list(map(lambda tmp: tmp.get_text().strip(), linha))
 
         coluna = soup.find("div", {"class": "coluna"}).find("select").select("option")
-        coluna = list(map(lambda node: node.get_text().strip(), coluna))
+        coluna = list(map(lambda tmp: tmp.get_text().strip(), coluna))
 
         periodo = soup.find("div", {"class": "periodo"}).find("select").select("option")
-        periodo = list(map(lambda node: node.get_text().strip(), periodo))
+        periodo = list(map(lambda tmp: tmp.get_text().strip(), periodo))
         
         self.linha, self.coluna, self.periodo = linha, coluna, periodo
     
     def obterDf(self, linha_valor, coluna_valor, periodo_valor):
         browser_name = ["google-chrome.desktop", "brave-browser.desktop", "chromium_chromium.desktop"]
-        i = 0
-        while (i < 3):
+        
+        for item in browser_name:
             try:
-                driver = initDriver(browser_name[i])
-                i = 3
+                driver = initDriver(item)
+                break
             except:
-                i += 1
+                pass
 
         driver.set_page_load_timeout(100)
         driver.get(self.obterUrl())
@@ -107,9 +108,9 @@ class arboVirose():
         
         soup = BeautifulSoup(html, 'html.parser')
         tabdados = soup.select(".tabdados tbody tr td ")
-        tabdados = list(map(lambda node: node.get_text().strip(), tabdados))
+        tabdados = list(map(lambda tmp: tmp.get_text().strip(), tabdados))
         col_tabdados = soup.select(".tabdados th ")
-        col_tabdados = list(map(lambda node: node.get_text().strip(), col_tabdados))
+        col_tabdados = list(map(lambda tmp: tmp.get_text().strip(), col_tabdados))
         
         tam_lin = int(len(tabdados)/len(col_tabdados))
         tam_col = len(col_tabdados)
@@ -140,7 +141,7 @@ class arboVirose():
         aux.insert(0, aux.pop())
         df = df[aux]
         
-        df.iloc[:, 2:] = df.iloc[:, 2:].astype(str).replace('\.', '', regex=True)
-        df.iloc[:, 2:] = df.iloc[:, 2:].astype(str).replace('-', '0')
+        df.iloc[:, 2:] = df.iloc[:, 2:].astype('str').replace('\.', '', regex=True)
+        df.iloc[:, 2:] = df.iloc[:, 2:].astype('str').replace('-', '0')
         
         return df

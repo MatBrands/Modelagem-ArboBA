@@ -3,12 +3,17 @@ channels:
   - conda-forge
 dependencies:
   - python
+  - pip
   - pandas
+  - geopandas
   - numpy
   - matplotlib
-  - ipywidgets
-  - geopandas
-  - pip
+  - beautifulsoup4
+  - html5lib
+  - selenium
+  - webdriver-manager
+  - pyogrio
+  - fiona
   - nbformat
   - ipykernel
   - openpyxl
