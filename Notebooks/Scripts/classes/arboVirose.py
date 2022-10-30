@@ -37,7 +37,7 @@ class arboVirose():
     def __init__(self, arbo_v):
         os.environ['WDM_LOG_LEVEL'] = '0'
         self.arbo_v = arbo_v
-        self.obter_info()
+        self.obterInfo()
     
     def obterUrl(self):
         if self.arbo_v == 'dengue':

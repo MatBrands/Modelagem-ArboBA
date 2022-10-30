@@ -1,0 +1,20 @@
+name: arboba-venv
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pip
+  - pandas
+  - geopandas
+  - numpy
+  - matplotlib
+  - beautifulsoup4
+  - html5lib
+  - selenium
+  - webdriver-manager
+  - pyogrio
+  - fiona
+  - pyqt
+  - nbformat
+  - ipykernel
+  - openpyxl

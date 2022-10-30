@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class plotGraficos():
     def __init__(self, df, arbo_v, linha, coluna, periodo):
-        plt.rcParams["figure.figsize"] = (15, 15)
+        plt.rcParams["figure.figsize"] = (10, 10)
         self.df, self.arbo_v, self.linha, self.coluna, self.periodo = df, arbo_v, linha, coluna, periodo
 
     def definirPlotagem(self):
@@ -18,6 +18,7 @@ class plotGraficos():
             self.pltSexo()
         elif self.coluna == 'Fx Etária SINAN':
             self.pltFxEtaria()
+        plt.show()
 
     def pltCasos(self):
         casos = self.df.iloc[:, 2:].astype('int64').sum()
@@ -25,12 +26,13 @@ class plotGraficos():
         plt.bar(casos.index, casos.iloc[:, 0], color="#103b6e")
         plt.xlabel("Anos")
         plt.ylabel("Casos")
-        if self.arbo_v == "dengue":
+        if self.arbo_v == "Dengue":
             plt.title("Dengue")
-        elif self.arbo_v == "chikungunya":
+        elif self.arbo_v == "Chikungunya":
             plt.title("Chikungunya")
-        elif self.arbo_v == "zika":
+        elif self.arbo_v == "Zika":
             plt.title("Zika Vírus")
+        plt.show()
           
     def pltObitos(self):
         obitos = self.df.iloc[:, 2:].astype('int64').sum()
@@ -39,6 +41,7 @@ class plotGraficos():
         plt.xlabel("Anos")
         plt.ylabel("Óbitos")
         plt.title("Dengue")
+        plt.show()
         
     def pltMes(self):
         meses = self.df.iloc[:, 2:].astype('int64').sum()
@@ -46,12 +49,13 @@ class plotGraficos():
         plt.bar(meses.index, meses.iloc[:, 0], color="#103b6e")
         plt.xlabel("Meses")
         plt.ylabel("Casos")
-        if self.arbo_v == "dengue":
+        if self.arbo_v == "Dengue":
             plt.title(f"Dengue")
-        elif self.arbo_v == "chikungunya":
+        elif self.arbo_v == "Chikungunya":
             plt.title(f"Chikungunya")
-        elif self.arbo_v == "zika":
+        elif self.arbo_v == "Zika":
             plt.title("Zika Vírus")
+        plt.show()
             
     def pltSexo(self):
         sexo = self.df.iloc[:, 2:].astype('int64')
@@ -63,12 +67,13 @@ class plotGraficos():
         plt.bar(sexo.index, sexo.iloc[:, 0], color="#103b6e")
         plt.xlabel("Sexos")
         plt.ylabel("Casos")
-        if self.arbo_v == "dengue":
+        if self.arbo_v == "Dengue":
             plt.title(f"Dengue")
-        elif self.arbo_v == "chikungunya":
+        elif self.arbo_v == "Chikungunya":
             plt.title(f"Chikungunya")
-        elif self.arbo_v == "zika":
+        elif self.arbo_v == "Zika":
             plt.title("Zika Vírus")
+        plt.show()
             
     def pltFxEtaria(self):
         fx_etaria = self.df.iloc[:, 2:].astype('int64').sum()
@@ -80,9 +85,10 @@ class plotGraficos():
         plt.bar(Faixa, Casos, color="#103b6e")
         plt.xlabel("Faixas")
         plt.ylabel("Casos")
-        if self.arbo_v == "dengue":
+        if self.arbo_v == "Dengue":
             plt.title(f"Dengue")
-        elif self.arbo_v == "chikungunya":
+        elif self.arbo_v == "Chikungunya":
             plt.title(f"Chikungunya")
-        elif self.arbo_v == "zika":
+        elif self.arbo_v == "Zika":
             plt.title("Zika Vírus")
+        plt.show()

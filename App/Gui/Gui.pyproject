@@ -1,0 +1,3 @@
+{
+    "files": ["tela_inicial.ui","tela_selecao.ui", "tela_df.ui", "tela_tab.ui", "sair.ui","periodo.ui"]
+}
