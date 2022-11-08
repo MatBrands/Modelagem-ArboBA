@@ -115,7 +115,7 @@ class AppGui(QtWidgets.QMainWindow):
         self.tela_tab.label.setText(f'{self.arbo.arbo_v} - Total de Casos por ano')
         model = pandasModel(self.tab.total_casos)
         self.tela_tab.dataframe.setModel(model)
-        self.tela_tab.confirmarButton.clicked.connect(QtWidgets.QApplication.quit)
+        self.tela_tab.confirmarButton.clicked.connect(self.getDf)
             
     def geoRef(self):
         df = geoRef(self.df)

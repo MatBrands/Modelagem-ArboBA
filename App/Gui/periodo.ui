@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(33, 37, 41);</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
@@ -37,6 +40,9 @@
      <width>170</width>
      <height>210</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(108, 117, 125);</string>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::MultiSelection</enum>

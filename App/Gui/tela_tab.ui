@@ -23,7 +23,7 @@
    <string>Modelagem ArboBA</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(75, 75, 75);</string>
+   <string notr="true">background-color: rgb(33, 37, 41);</string>
   </property>
   <property name="documentMode">
    <bool>false</bool>
@@ -55,7 +55,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(108, 117, 125);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
@@ -93,7 +93,7 @@ background-color: rgb(255, 255, 255);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(130, 130, 130);
+      <string notr="true">background-color: rgb(27, 135, 85);
 color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
